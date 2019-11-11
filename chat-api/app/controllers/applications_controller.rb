@@ -15,7 +15,7 @@ class ApplicationsController < ApplicationController
   end
 
   def update
-    @application = Application.find(params[:access_token])
+    @application = Application.find_by!(access_token: params[:access_token])
     @application.update(application_params)
     render_json @application
   end

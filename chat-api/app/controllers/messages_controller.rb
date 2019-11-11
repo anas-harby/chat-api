@@ -16,7 +16,7 @@ class MessagesController < ApplicationController
   end
 
   def update
-    @message = @chat.messages.find(params[:number])
+    @message = @chat.messages.find_by!(number: params[:number])
     @message.update(message_params)
     render_json @message
   end

@@ -5,4 +5,4 @@
 
 :schedule:
   RefreshIndexesWorker:
-    every: '5s'
+    every: '120s'
