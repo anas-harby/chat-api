@@ -8,16 +8,16 @@ services:
     environment:
       MYSQL_HOST: db
       MYSQL_ROOT_PASSWORD: root
-    ports:
-      - "3306:3306"
+    expose:
+      - "3306"
 
   redis:
     image: redis
     restart: always
     environment:
       REDIS_HOST: redis
-    ports:
-      - "6379:6379"
+    expose:
+      - "6379"
 
   elasticsearch:
     image: elasticsearch:6.8.4
@@ -25,8 +25,8 @@ services:
     environment:
       ELASTICSEARCH_HOST: elasticsearch
       ES_JAVA_OPTS: "-Xms750m -Xmx750m"
-    ports:
-      - "9200:9200"
+    expose:
+      - "9200"
 
   chat-api:
     build: ./chat-api
