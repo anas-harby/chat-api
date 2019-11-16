@@ -2,7 +2,7 @@
 Chatting API application in Ruby on Rails and Go
 
 ## Overview
-The API is composed of two separate service:
+The API is composed of two separate services:
 - Chat API (Rails): Main service which provides most of the core management operations (create, update, get) of applications, chats, and messages, also supports searching through messages in chats using `elasticsearch`.
 - Chat/Message Creation API (Golang): A complementary service to chat API that is responsible for creating chats and messages.
 
